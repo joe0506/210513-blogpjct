@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
+import dj_database_url
 
 from pathlib import Path
 
@@ -78,8 +79,12 @@ WSGI_APPLICATION = 'Blog.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd9n45llf77cmra', 
+        'USER': 'dkecguowpamwxx', 
+        'PASSWORD': 'b1fce94b7d54a74238bf25f4f48effebd595cc1a9893b3dd3f1910d93cc5d34a', 
+        'HOST': 'ec2-18-215-111-67.compute-1.amazonaws.com', 
+        'PORT': '5432', 
     }
 }
 
